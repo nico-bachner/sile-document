@@ -1,0 +1,14 @@
+name: SILE
+on: [push, pull_request]
+jobs:
+  sile:
+    runs-on: ubuntu-20.04
+    name: SILE
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: SILE
+        id: sile
+        uses: docker://siletypesetter/sile:latest
+        with:
+          args: test.sil
