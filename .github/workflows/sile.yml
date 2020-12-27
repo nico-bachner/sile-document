@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: SILE
         id: sile
-        uses: sile-typesetter/sile@latest
+        uses: docker://siletypesetter/sile:latest
         with:
           args: document.sil
       - uses: stefanzweifel/git-auto-commit-action@v4
