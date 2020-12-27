@@ -12,3 +12,6 @@ jobs:
         uses: docker://siletypesetter/sile:latest
         with:
           args: test.sil
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Add auto-built SILE document
